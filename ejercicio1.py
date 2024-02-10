@@ -1,33 +1,36 @@
-from math import pi 
-def areas_figura (f):
+from funmath import *
+print ("Generador de áreas de figuras geométricas")
+
+inicio = input("\nDesea iniciar? s/n: ")
+if inicio == "s":
     while True:
-        figura = input(f)
-        if figura == "1":
-            radio = int(input("Ingrese el radio del circulo: "))
-            areaci = pi*(radio**2)
-            return areaci
-        elif figura == "2":
-            ladocu = int(input("Ingrese el lado del cuadrado: "))
-            areacua = ladocu*ladocu
-            return areacua    
-        elif figura == "3":
-            largo = int(input("Ingrese el largo del rectangulo: "))
-            ancho = int(input("Ingrese el ancho del rectangulo: "))
-            arearec = largo*ancho
-            return arearec
-        elif figura == "4":
-            base = int(input("Ingrese la base del triangulo: "))
-            altura = int(input("Ingrese la altura del triangulo: "))
-            areatri = (base*altura)/2
-            return areatri
-        elif figura == "5":
-            basema = int(input("Ingrese la base superior: "))
-            baseme = int(input("Ingrese la base inferior: "))
-            altu = int(input("Ingrese la altura del trapecio: "))
-            areatra = (basema+baseme)*altu/2
-            return areatra
-        else:
-            print ("Ingrese un nombre de figura valido")
+        try:
+            print ("\n1.-Circulo \n2.-Cuadrado \n3.-Rectángulo \n4.-Triángulo \n5.-Trapecio")
+            areaelegida = int(input("\nIngrese el número de la figura de la cual hallará el área: "))
 
-
-        
+            while True:
+                if areaelegida == 1:
+                    ci = area_circulo()
+                    print (f"El área del circulo es {ci:.2f}")
+                elif areaelegida == 2:
+                    cua = area_cuadrado()
+                    print (f"El área del cuadrado es {cua:.2f}")
+                elif areaelegida == 3:
+                    rec = area_rectangulo()
+                    print (f"El área del rectangulo es {rec:.2f}")
+                elif areaelegida == 4:
+                    tri = area_triangulo()
+                    print (f"El área del triángulo es {tri:.2f}")
+                elif areaelegida == 5:
+                    tra = area_trapecio()
+                    print (f"El área del trapecio es {tra:.2f}")
+                else:
+                    print ("\nIngrese una opción valida")
+                    print ("\n1.-Circulo \n2.-Cuadrado \n3.-Rectángulo \n4.-Triángulo \n5.-Trapecio")
+                    areaelegida = int(input("\nIngrese el número de la figura de la cual hallará el área: "))
+                break
+            break
+        except ValueError:
+            print ("ERROR: Ingrese una opción con caracteres numericos")
+else:
+    print ("Vuelva pronto")
