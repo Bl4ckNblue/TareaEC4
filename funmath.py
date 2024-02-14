@@ -28,7 +28,7 @@ def area_rectangulo ():
         try:
             largo = float(input("Ingrese la longitud del largo del rectangulo: "))
             ancho = float(input("Ingrese la longitud del ancho del rectangulo: "))
-            if largo == ancho or largo and ancho <= 0 :
+            if largo == ancho or largo == 0 or ancho == 0 :
                 print ("El largo y el ancho no pueden ser iguales, ni tampoco pueden ser 0")
             else:
                 arearec = largo*ancho
@@ -41,7 +41,7 @@ def area_triangulo ():
         try:
             base = float(input("Ingrese la longitud de la base del triangulo: "))
             altura = float(input("Ingrese la longitud de la altura del triangulo: "))
-            if base or altura <= 0:
+            if base == 0 or altura == 0:
                 print ("Ninguno de los 2 valores debería ser 0")
             else:
                 areatri = (base*altura)/2
@@ -55,12 +55,12 @@ def area_trapecio ():
             basema = float(input("Ingrese la longitud de la base superior: "))
             baseme = float(input("Ingrese la longitud de la base inferior: "))
             altura = float(input("Ingrese la longitud de la altura del trapecio: "))
-            if basema or baseme or altura <=0:
+            if basema == 0 or baseme == 0 or altura == 0:
                 print ("Ninguno de estos valores debería ser 0")
+            elif basema == baseme:
+                print ("Estos valores no pueden ser iguales")            
             else:
                 areatra = (basema+baseme)*altura/2
                 return areatra
         except ValueError:
             print ("ERROR: Debe ingresar un número")
-
-        
