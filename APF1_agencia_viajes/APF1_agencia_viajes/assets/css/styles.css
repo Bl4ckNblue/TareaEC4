@@ -215,6 +215,13 @@ a {
     margin-bottom: 10px;
 }
 
+#f-informacion {
+    background-image: url(assets/img/andes.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #pie {
     background-color: var(--color-secundario);
     color: var(--color-texto-footer);
@@ -285,7 +292,6 @@ a {
 
 /* Enlaces del menú superior */
 .nav-bar a {
-    color: var(--color-texto);
     font-weight: 600;
     transition: all 0.4s ease-in-out;
 }
@@ -435,4 +441,17 @@ a {
     letter-spacing: 1px;
     color: var(--color-secundario);
     opacity: 0.8;
+}
+
+.btn-cian {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    font: inherit;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
 }
